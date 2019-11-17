@@ -118,6 +118,12 @@ function auto_safeconvert() {
     a_to_vg = a_to_vf.length;
     var a_to_vh = false;
     var j = 0;
+    var daftarPostingan = [
+      "https://budidaya.penapengajar.com/2019/05/02/rahasia-cara-menanam-cabe-di-pot-agar-cepat-berbuah-dan-lebat/",
+      "https://budidaya.penapengajar.com/2019/04/28/cara-menanam-bawang-merah/",
+      "https://budidaya.penapengajar.com/tentang-kami/",
+      ];
+    var randomPostingan = daftarPostingan[Math.floor(Math.random()*daftarPostingan.length)];
     var a_to_vi = "";
     for (var i = 0; i < a_to_va; i++) {
         a_to_vh = false;
@@ -131,7 +137,7 @@ function auto_safeconvert() {
         }
         if (a_to_vh == false) {
             var encryptedUrl = Base64.encode(a_to_vi);
-            a_to_ve[i].href = "https://lifestyle.penapengajar.com/golink/?url=" + encryptedUrl;
+            a_to_ve[i].href = randomPostingan + "?url=" + encryptedUrl;
             a_to_ve[i].rel = "nofollow";
             a_to_vb++;
             a_to_vc += i + ":::" + a_to_ve[i].href + "\n";
